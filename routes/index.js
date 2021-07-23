@@ -22,7 +22,7 @@ const router = (app) => {
 
   paths.get('/files/:id', auth, FilesController.getShow);
   paths.get('/files', auth, FilesController.getIndex);
-
+  paths.post('/files', auth, FilesController.postUpload);
   paths.put('/files/:id/publish', auth, FilesController.putPublish);
   paths.put('/files/:id/unpublish', auth, FilesController.putUnpublish);
 
